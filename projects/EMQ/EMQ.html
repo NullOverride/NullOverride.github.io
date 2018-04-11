@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>EMQ Online Retail Store</title>
+		<meta name="description" content="My Site">
+		<meta name="author" content="NullOverride">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+		body {
+			background-color: black;
+			display: block;
+			margin: 8px;
+			margin-top: 8px;
+			margin-right: 8px;
+			margin-bottom: 8px;
+			margin-left: 8px;
+		}
+		h1   {color: white;}
+		li   {color: white;}
+		p    {color: white;}
+		h1	 {color: white;}
+		h2	 {color: white;}
+		h3	 {color: white;}
+		h4	 {color: white;}
+		h5	 {color: white;}
+		a:link {
+			color: red;
+			text-decoration: underline;
+		}
+		a:visited {
+			color: hotpink;
+		}
+		a:hover {
+			color: pink;
+		}
+		a:active {
+			color: red;
+		}
+		img {
+			max-width:800px;
+		
+		}
+		</style>
+	</head>
+	
+	<body>
+		<h1>EMQ Online Retail Store</h1>
+		<br>
+		<h4>This online website was a team project following the Agile methodology that had several requirements.</h4>
+		<br>
+		<p><b>Problem statement<b> – New local electronic retailer chain, “EMQ”, in the Bay Area counties (San
+Francisco, San Mateo, Santa Clara, Alameda, Contra Costa) wants to add delivery services as part of their
+business plan. First, use population density information and map to determine strategically where to open
+their 2 stores per county. Second, make sure each store is optimally located so deliveries can be speedy.
+You are responsible to develop the website where customer can purchase electronic devices (e.g. TVs,
+stereos, computers, …, etc. into a virtual shopping cart. Pay for it online and have it delivery to their
+home. Need to be able to track the delivery truck via Google map. Inventory, customer, transactions are
+processed and stored in RDBMS.</p>
+		<br>
+		<h4>In Simpler Terms:</h4>
+		<ul>
+		<li>Must be full-stack with languages of your choice. (PHP/HTML/MySQL)</li>
+		<li>Locally hosted. (We used MAMP, which bundles Apache and PHP)</li>
+		<li>Must have a "cart" or a returning session.</li>
+		<li>Determine locations for optimal delivery..</li>
+		<li>Must simulate a full online transaction.</li>
+		<li>Must simulate sample delivery and item tracking.</li>
+		<li>Must work on mobile devices as well.</li>
+		</ul>
+		<h4>The full source code can be found here - <a href="https://github.com/NullOverride/EMQ" target="_blank">https://github.com/NullOverride/EMQ</a></h4>
+		
+		<h4><a href="./UserGuide.pdf" target="_blank">Check out the User Guide for a glimpse of all the features!</a></h4>
+		<h4><a href="./ProjectProposal.pdf" target="_blank">Check out the High/Low Level Design and Pseudo-code for the project!</a></h4>
+		
+		<br>
+		<h3>Home Page</h3>
+		<img src="./homepage.jpg" />
+		<h3>Bootstrap</h3>
+		<p>Bootstrap is an easy way to add mobile integration through its responsive CSS. The easiest way of importing the library across all pages is to create a header file that is included on each page. For example:</p>
+		<p><b>Header.php will include</b><p>
+		<img src="./bootstrap.png" />
+		<p><b>Then from any other page you add: <u>&lt;?php require 'include/header.php'; ?&gt;</u></b></p>
+		<p>You can get the lastest Bootstrap from here <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a>
+		
+		<h3>Delivery / Tracking</h3>
+		<img src="./delivery.jpg" />
+		<h3>Google Maps API</h3>
+		<p>We used Google's Javascript API for Google Maps at <a href="https://maps.googleapis.com/maps/api/js" target="_blank">https://maps.googleapis.com/maps/api/js</a>. You will need a API key in order to make JSON requests.</p>
+		<p>We also used GeocodeZIP's Google Maps extension script to calculate distances and other stuff. <a href="http://www.geocodezip.com/scripts/v3_epoly.js" target="_blank">http://www.geocodezip.com/scripts/v3_epoly.js</a>
+		
+		<h3>Aaand of course.. a 403 page</h3>
+		<img src="./403.jpg" />
+		
+		
+	</body>
+	
+</html>

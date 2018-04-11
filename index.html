@@ -7,14 +7,163 @@
 		<title>My Site</title>
 		<meta name="description" content="My Site">
 		<meta name="author" content="NullOverride">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+		body {background-color: black;}
+		h1   {color: white;}
+		p    {color: white;}
+		h4	 {color: white;}		
+		a:link {
+			color: red;
+			text-decoration: underline;
+		}
+		a:visited {
+			color: hotpink;
+		}
+		a:hover {
+			color: pink;
+		}
+		a:active {
+			color: red;
+		}
+		.panel-heading .panel-toggle:after {
+			font-family: 'Glyphicons Halflings'; 
+			content: "\e114";    
+			float: right;        
+			color: #000;         
+		}
+		.panel-heading .panel-toggle.collapsed:after {
+			content: "\e080"; 
+		}
+		</style>
 	</head>
 	
 	<body>
-		Hello! Better site incoming.
-		<br><br>
-		For now..
+		<div class="container">
+		<h1>Hello! Better site incoming.</h1>
 		<br>
-		<a href="./ctfs/">CTF Writeups</a>
+		<p>For now..</p>
+		<br>
+
+		<!-- Root accordian -->
+		<div class="panel-group" id="accordion1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="panel-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse2">
+						CTF Write-ups
+						</a>
+					</h4>
+				</div>
+			<!-- Here we insert another nested accordion -->
+			<div id="collapse2" class="panel-body collapse">
+				<div class="panel-inner">
+					<div class="panel-group" id="accordion2">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="panel-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
+									EasyCTF 2018
+									</a>
+								</h4>
+							</div>
+							<!-- Here we insert another nested accordion -->
+							<div id="collapse3" class="panel-body collapse">
+								<div class="panel-inner">                
+									<div class="panel-group" id="accordion2">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a class="panel-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseForm">
+												???
+													</a>
+												</h4>
+											</div>
+										</div>       
+									</div>            
+								</div>
+							</div>
+						<!-- Inner accordion ends here -->
+						</div>       
+					</div>
+				</div>
+			</div>
+			<!-- Inner accordion ends here -->
+		</div>
+	</div>
+	<!-- Root accordian ends here -->
+	
+	
+	<!-- Root accordian2 -->
+	<div class="panel-group" id="2accordion1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="panel-toggle" data-toggle="collapse" data-parent="#2accordion1" href="#2collapse2">
+						Old Projects
+						</a>
+					</h4>
+				</div>
+			<!-- Here we insert another nested accordion -->
+			<div id="2collapse2" class="panel-body collapse">
+				<div class="panel-inner">
+					<div class="panel-body">
+					<a href="./projects/EMQ/EMQ.html">PHP/MySQL - Full-stack Online Retail Store</a>
+					</div>
+				</div>
+				<div class="panel-inner">
+					<div class="panel-body">
+					JFLAP - Simple Calculator Turing Machine
+					</div>
+				</div>
+				<div class="panel-inner">
+					<div class="panel-body">
+					Java - Whiteboard Application w/ Networking
+					</div>
+				</div>
+				<div class="panel-inner">
+					<div class="panel-body">
+					Java - Creating Basic JavaScript using ANTLR, a Lexer/Parser
+					</div>
+				</div>
+				<div class="panel-inner">
+					<div class="panel-body">
+					Java - 2-Player Connect 4 w/ Graphical User Interface
+					</div>
+				</div>
+				<div class="panel-inner">
+					<div class="panel-body">
+					C - CLI 1/2 Player Connect 4 w/ Priority-based AI
+					</div>
+				</div>
+				<div class="panel-inner">
+					<div class="panel-body">
+					Racket - Fizzbuzz implementation
+					</div>
+				</div>
+				<div class="panel-inner">
+					<div class="panel-body">
+					C - SNMP Manager (very bad code)
+					</div>
+				</div>
+				<div class="panel-inner">
+					<div class="panel-body">
+					Hotel MySQL Database
+					</div>
+				</div>
+			</div>
+			<!-- Inner accordion ends here -->
+		</div>
+	</div>
+	<!-- Root accordian ends here -->
+	</div>
+		
 	</body>
 	
 </html>

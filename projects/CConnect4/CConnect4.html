@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>C - CLI Connect 4</title>
+		<meta name="description" content="My Site">
+		<meta name="author" content="NullOverride">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+		body {
+			background-color: black;
+			display: block;
+			margin: 8px;
+			margin-top: 8px;
+			margin-right: 8px;
+			margin-bottom: 8px;
+			margin-left: 8px;
+		}
+		h1   {color: white;}
+		li   {color: white;}
+		p    {color: white;}
+		h1	 {color: white;}
+		h2	 {color: white;}
+		h3	 {color: white;}
+		h4	 {color: white;}
+		h5	 {color: white;}
+		a:link {
+			color: red;
+			text-decoration: underline;
+		}
+		a:visited {
+			color: hotpink;
+		}
+		a:hover {
+			color: pink;
+		}
+		a:active {
+			color: red;
+		}
+		img {
+			max-width:800px;
+		
+		}
+		</style>
+	</head>
+	
+	<body>
+		<h1>C - CLI 1/2 Player Connect 4 w/ Priority-based AI</h1>
+		
+		Usage:
+		cl p3.c (To compile)
+
+		p3 [1 or 2 players] (Player v. Comp or Player v. Player)
+
+
+		<h4>Notes:</h4>
+		<ul>
+		<li>The computer should not lose to an "average" player in less than 20 moves, but it is still possible to win under 20 moves. It checks for winning moves, defensive moves, losing moves, and then priority moves.</li>
+		<li><b>WARNING:</b> Using letters or particular symbols will result in an infinite loop as the scanf function cannot handle them. However, the program will check if the column chosen is out of bounds. Please keep the input between 1-7.</li>
+		<li>There is a small bug (sometimes) that crashes the program after the game has ended but results are accurate.</li>
+</ul>
+
+
+		
+	</body>
+	
+</html>
