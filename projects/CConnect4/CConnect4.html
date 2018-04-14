@@ -54,20 +54,35 @@
 	
 	<body>
 		<h1>C - CLI 1/2 Player Connect 4 w/ Priority-based AI</h1>
+		<br>
+		<h3>This program was compiled using Microsoft Visual Studio 2013/2017 Compiler, using other compilers such as GCC might not work.</h4>
+		<h4>Here is the <a href="./Connect4.c" target="_blank">Source code</a>.
+		<br>Here is the <a href="./Connect4.exe" targer="_blank">compiled program</a>. Try to beat my program!</h4>
+		<p>MD5 hash: 635FEBBC432552FEC5F663356D1AC732<br>
+		SHA1 hash: B2CB729DE0B7AF5B030D81BA6A5CE789D7C6DD72<br>
+		SHA256 hash: F2D0B0E8BE9A1E17364E206EDB5261B40D93BF73E064A88569D009556E05ADF7</p>
+		<h2>The real goal is to beat this AI in under 20 moves (or 9 player moves) and IT IS POSSIBLE!</h2>
+		<img src="./ibeatit.png" />
+		<!--554652363-->
+		<br><br>
+		<p>Usage (in Command Prompt):<br>
+		<b>cl Connect4.c (To compile)<br>
+		./Connect4.exe [1 or 2 players (Player v. Comp or Player v. Player)] </b></p>
+		<br>
+		<h4>These are the <a href="./p3.pdf" target="_blank">original instructions</a>.</h4>
 		
-		Usage:
-		cl p3.c (To compile)
-
-		p3 [1 or 2 players] (Player v. Comp or Player v. Player)
-
-
 		<h4>Notes:</h4>
 		<ul>
+		<li>The computer will always start first.</li>
 		<li>The computer should not lose to an "average" player in less than 20 moves, but it is still possible to win under 20 moves. It checks for winning moves, defensive moves, losing moves, and then priority moves.</li>
 		<li><b>WARNING:</b> Using letters or particular symbols will result in an infinite loop as the scanf function cannot handle them. However, the program will check if the column chosen is out of bounds. Please keep the input between 1-7.</li>
 		<li>There is a small bug (sometimes) that crashes the program after the game has ended but results are accurate.</li>
-</ul>
-
+		</ul><br>
+		<h3>Sample Game vs AI</h3>
+		<img src="./a.png" />
+		<img src="./b.png" />
+		<h3>How the nextMove() is implemented:</h3>
+		<p>The CPU first copies the board to try a lot of different moves starting from the worst move which is to find any open column and drop a token. As we progress down the code, the CPU "changes its mind" and finds better solutions such as which columns it should prioritize. Every time a move is made, it resets the board to the original position of the turn. After priority columns, the CPU checks for defensive moves to prevent the player from winning. And last, it checks if there is a winning move and that has the highest priority.</p>
 
 		
 	</body>
