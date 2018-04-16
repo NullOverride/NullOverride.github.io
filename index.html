@@ -17,8 +17,15 @@
 		<style>
 		body {background-color: black;}
 		h1   {color: white;}
+		h2   {color: white;}
 		p    {color: white;}
-		h4	 {color: white;}		
+		h4	 {color: white;}
+		td	 {color: yellow;}	
+		th	 {color: red;}
+		.table tbody tr:hover td, .table tbody tr:hover th {
+			background-color: gray;
+		}
+		table {border:2px solid}
 		a:link {
 			color: red;
 			text-decoration: underline;
@@ -64,33 +71,8 @@
 			<!-- Here we insert another nested accordion -->
 			<div id="collapse2" class="panel-body collapse">
 				<div class="panel-inner">
-					<div class="panel-group" id="accordion2">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a class="panel-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
-									EasyCTF 2018
-									</a>
-								</h4>
-							</div>
-							<!-- Here we insert another nested accordion -->
-							<div id="collapse3" class="panel-body collapse">
-								<div class="panel-inner">                
-									<div class="panel-group" id="accordion2">
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="panel-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseForm">
-												???
-													</a>
-												</h4>
-											</div>
-										</div>       
-									</div>            
-								</div>
-							</div>
-						<!-- Inner accordion ends here -->
-						</div>       
+					<div class="panel-body">
+						EasyCTF
 					</div>
 				</div>
 			</div>
@@ -162,6 +144,52 @@
 		</div>
 	</div>
 	<!-- Root accordian ends here -->
+	<br>
+	<h2>Previous CTF Rankings</h2>
+	
+	<table class="table table-hover table-dark">
+		<thead>
+			<tr>
+				<th scope="col">Name</th>
+				<th scope="col">Ranking</th>
+				<th scope="col">Points</th>
+				<th scope="col">Screenshot</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>NCL Reg Season 2018 (Thanks Chad!)</td>
+				<td>Silv Bracket:<b>87th place </b>/873 <br> Overall: <b>350th place </b>/ 3122</td>
+				<td>1640</td>
+				<td><a href="./ctfs/NCL/regs.html">Link</a> <br><a href="./ctfs/NCL/reg.html">Link2</a></td>
+			</tr>
+			<tr>
+				<td>NCL Preseason 2018 (Thanks Chad!)</td>
+				<td><b>813th place </b>/ 3118</td>
+				<td>795</td>
+				<td><a href="./ctfs/NCL/pre.html">Link</a></td>
+			</tr>
+			<tr>
+				<td>RUSecure 2018</td>
+				<td><b>14th place </b>/ 88</td>
+				<td>32,668</td>
+				<td><a href="./ctfs/RUSecure/ru.html">Link</a></td>
+			</tr>
+			<tr>
+				<td>AngstromCTF 2018</td>
+				<td><b>119-120th place </b>/ 778</td>
+				<td>620</td>
+				<td><a href="./ctfs/AngstromCTF/ang.jpg">Link</a></td>
+			</tr>
+			<tr>
+				<td>EasyCTF 2018</td>
+				<td><b>224th place </b>/ 2146</td>
+				<td>1231</td>
+				<td><a href="./ctfs/EasyCTF/Soloist.html">Link</a></td>
+			</tr>
+		</tbody>
+	</table>
+	
 	</div>
 		
 	</body>
