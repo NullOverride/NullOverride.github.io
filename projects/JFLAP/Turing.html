@@ -55,10 +55,45 @@
 	<body>
 		<h1>Simple Calculator Turing Machine</h1>
 		<h3>JFLAP</h3>
-		<p>JFLAP is software for experimenting with formal languages. It allows us to construct nondeterministic finite automata or parse different types of grammars. In this case, we constructed a simple Calculator using a Turing Machine. We used JFLAP 7.0, which is <b><u>NOT</b></u> the most updated version. You can get JFLAP 7.0 <a href="./JFLAP.jar">here</a>.</p>
-		<img src="./JFLAP.png" />
+		<p>JFLAP is software for experimenting with formal languages. It allows us to construct nondeterministic finite automata or parse different types of grammars. In this case, we constructed a simple Calculator using a Turing Machine. We used JFLAP 7.0, which is <b><u>NOT</b></u> the most updated version. You can get JFLAP 7.0 <a href="./JFLAP.jar">here</a>.</p><br>
+		
+		<img src="./JFLAP.png" /><br>
 
+		<h2>A Basic Machine</h2>
+		<p>A basic Turing machine takes in a "tape" of input and processes the first value and determines if the machine will read the left or right value next. The circles represent the current state the machine is in, starting with the state with the big triangle (p0). The lines represent valid input to proceed to the next state. This line takes 3 values: input(the current value on tape), output(what to print on tape), and direction (L/R). If the state does not have a line that can take the input, the machine will halt and stop. A double circle indicates an accepted state.</p>
+		
+		<p>This machine will only take the input of "starting with one a and infinite amount of b's". Any other input such as "aab" or "bb" will not be accepted.</p>
+		
+		<img src="./simple.png" /><br>
+		
 		<h2>The Calculator</h2>
+		
+		<p>The goal is to create a simple binary calculator. The calculator must have the following:</p>
+		<ul>
+		<li>4 registers (A,B,C,D), B and C registers will have a limit of 10 bits.</li>
+		<li>Register A will be the final accumulator register.
+		<li>Support negative numbers.</li>
+		<li>Support ADD, SUB, INCREMENT/DEC, JUMP, LOAD, JUMP NOT EQUAL, JUMP IF ZERO, and HALT</li>
+		<li>The program should halt in an accepted state.</li>
+		</ul>
+		
+		<h3>High-level design</h3>
+		
+		<img src="./highlevel.png" /><br>
+		
+		<p>First, we initialize the registers before taking any input then look for the first letter of a valid command. Each command has many configurations to handle all kinds of values.</p>
+		
+		<h3>Example: ADDX command</h3>
+		
+		<img src="./add.png" /><br>
+		
+		<p>All these blocks can by viewed by right clicking on the state in the high-level design and selecting "Edit Block".</p>
+		
+		<h3>Example: Usage</h3>
+		
+		<img src="./Tests.png" /><br>
+		
+		<p>This menu can be accessed in the toolbar in "Input" -> "Multiple Run".
 		
 	</body>
 	
