@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://2018.pactf.com/game/Hopper/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="PACTF: Phillips Academy Capture The Flag, an online computer security competition">
+<meta name="author" content="PACTF">
+<title>
+    
+  Game —&nbsp;
+      PACTF
+    
+
+  </title>
+
+<script type="text/javascript">
+//<![CDATA[
+window.__cfRocketOptions = {byc:0,p:1523899823,petok:"e0326377f537bd48ea88efb6d3a70c9677632d92-1524985437-1800"};
+//]]>
+</script>
+<script type="text/javascript" src="./game2_files/rocket.min.js.download"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="https://2018.pactf.com/static/icons/apple-touch-icon-57x57.b4d7751ed900.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://2018.pactf.com/static/icons/apple-touch-icon-60x60.355dbed06a3c.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://2018.pactf.com/static/icons/apple-touch-icon-72x72.2e6089b6f03f.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://2018.pactf.com/static/icons/apple-touch-icon-76x76.e1b07cc3074b.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://2018.pactf.com/static/icons/apple-touch-icon-114x114.8b0b6c0ac555.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://2018.pactf.com/static/icons/apple-touch-icon-120x120.271577f7cb7d.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://2018.pactf.com/static/icons/apple-touch-icon-144x144.89f2226aa32f.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://2018.pactf.com/static/icons/apple-touch-icon-152x152.e701bf5eb402.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://2018.pactf.com/static/icons/favicon-32x32.e5641a147e77.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://2018.pactf.com/static/icons/favicon-96x96.d03c14e0c9a9.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://2018.pactf.com/static/icons/favicon-16x16.a6fbcf96bd5a.png">
+<link rel="manifest" href="https://2018.pactf.com/static/icons/manifest.b86297f399d7.json">
+<link rel="mask-icon" href="https://2018.pactf.com/static/icons/safari-pinned-tab.ceab609ccc07.svg" color="#5bbad5">
+<link rel="shortcut icon" href="https://2018.pactf.com/static/icons/favicon.7a0ea3d946fd.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/static/icons/mstile-144x144.8f9d9c856625.png">
+<meta name="msapplication-config" content="/static/icons/browserconfig.84cba7e2e576.xml">
+<meta name="theme-color" content="#5bbad5">
+<link rel="image_src" href="https://2018.pactf.com/static/ctflex/img/logo.4dd947d1ba72.png">
+
+<link rel="stylesheet" href="./game2_files/bootstrap.yeti.min.9c0463ccbe70.css">
+<link rel="stylesheet" href="./game2_files/jquery-ui.min.26812a288503.css">
+<link href="./game2_files/base.6cd36a731be3.css" rel="stylesheet">
+<link href="./game2_files/logo.3e253493d8af.css" rel="stylesheet">
+<link href="./game2_files/game.css" rel="stylesheet">
+<link href="./game2_files/active.2465e033a262.css" rel="stylesheet">
+
+<script data-rocketsrc="/static/ctflex/js/lib/jquery.min.e40ec2161fe7.js" type="text/rocketscript" data-rocketoptimized="true"></script>
+<script data-rocketsrc="/static/ctflex/jquery-ui-1.11.4/jquery-ui.min.d935d506ae9c.js" type="text/rocketscript" data-rocketoptimized="true"></script>
+<script data-rocketsrc="/static/ctflex/js/lib/jquery.cookie.min.4412bf802310.js" type="text/rocketscript" data-rocketoptimized="true"></script>
+<script data-rocketsrc="/static/ctflex/bootstrap-3.3.6-dist/js/bootstrap.min.c5b5b2fa19bd.js" type="text/rocketscript" data-rocketoptimized="true"></script>
+<script data-rocketsrc="/static/ctflex/js/lib/notify.min.08ec3790d1fb.js" type="text/rocketscript" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="/static/ctflex/js/ajax_utils.10a690fa3825.js" data-rocketoptimized="true"></script>
+<script data-rocketsrc="/static/ctflex/js/announcements.34aabf1d5995.js" type="text/rocketscript" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="/static/ctflex/js/game.js" data-rocketoptimized="true"></script>
+<script data-rocketsrc="/static/ctflex/js/countdown.4dd4e33c7a96.js" async="" type="text/rocketscript" data-rocketoptimized="true"></script>
+<style>@media print {#ghostery-purple-box {display:none !important}}</style><style type="text/css" id="notify-bootstrap">.notifyjs-bootstrap-base {
+	font-weight: bold;
+	padding: 8px 15px 8px 14px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	white-space: nowrap;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: 3px 7px;
+}
+.notifyjs-bootstrap-error {
+	color: #B94A48;
+	background-color: #F2DEDE;
+	border-color: #EED3D7;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNqkVc1u00AQHq+dOD+0poIQfkIjalW0SEGqRMuRnHos3DjwAH0ArlyQeANOOSMeAA5VjyBxKBQhgSpVUKKQNGloFdw4cWw2jtfMOna6JOUArDTazXi/b3dm55socPqQhFka++aHBsI8GsopRJERNFlY88FCEk9Yiwf8RhgRyaHFQpPHCDmZG5oX2ui2yilkcTT1AcDsbYC1NMAyOi7zTX2Agx7A9luAl88BauiiQ/cJaZQfIpAlngDcvZZMrl8vFPK5+XktrWlx3/ehZ5r9+t6e+WVnp1pxnNIjgBe4/6dAysQc8dsmHwPcW9C0h3fW1hans1ltwJhy0GxK7XZbUlMp5Ww2eyan6+ft/f2FAqXGK4CvQk5HueFz7D6GOZtIrK+srupdx1GRBBqNBtzc2AiMr7nPplRdKhb1q6q6zjFhrklEFOUutoQ50xcX86ZlqaZpQrfbBdu2R6/G19zX6XSgh6RX5ubyHCM8nqSID6ICrGiZjGYYxojEsiw4PDwMSL5VKsC8Yf4VRYFzMzMaxwjlJSlCyAQ9l0CW44PBADzXhe7xMdi9HtTrdYjFYkDQL0cn4Xdq2/EAE+InCnvADTf2eah4Sx9vExQjkqXT6aAERICMewd/UAp/IeYANM2joxt+q5VI+ieq2i0Wg3l6DNzHwTERPgo1ko7XBXj3vdlsT2F+UuhIhYkp7u7CarkcrFOCtR3H5JiwbAIeImjT/YQKKBtGjRFCU5IUgFRe7fF4cCNVIPMYo3VKqxwjyNAXNepuopyqnld602qVsfRpEkkz+GFL1wPj6ySXBpJtWVa5xlhpcyhBNwpZHmtX8AGgfIExo0ZpzkWVTBGiXCSEaHh62/PoR0p/vHaczxXGnj4bSo+G78lELU80h1uogBwWLf5YlsPmgDEd4M236xjm+8nm4IuE/9u+/PH2JXZfbwz4zw1WbO+SQPpXfwG/BBgAhCNZiSb/pOQAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-success {
+	color: #468847;
+	background-color: #DFF0D8;
+	border-color: #D6E9C6;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAutJREFUeNq0lctPE0Ecx38zu/RFS1EryqtgJFA08YCiMZIAQQ4eRG8eDGdPJiYeTIwHTfwPiAcvXIwXLwoXPaDxkWgQ6islKlJLSQWLUraPLTv7Gme32zoF9KSTfLO7v53vZ3d/M7/fIth+IO6INt2jjoA7bjHCJoAlzCRw59YwHYjBnfMPqAKWQYKjGkfCJqAF0xwZjipQtA3MxeSG87VhOOYegVrUCy7UZM9S6TLIdAamySTclZdYhFhRHloGYg7mgZv1Zzztvgud7V1tbQ2twYA34LJmF4p5dXF1KTufnE+SxeJtuCZNsLDCQU0+RyKTF27Unw101l8e6hns3u0PBalORVVVkcaEKBJDgV3+cGM4tKKmI+ohlIGnygKX00rSBfszz/n2uXv81wd6+rt1orsZCHRdr1Imk2F2Kob3hutSxW8thsd8AXNaln9D7CTfA6O+0UgkMuwVvEFFUbbAcrkcTA8+AtOk8E6KiQiDmMFSDqZItAzEVQviRkdDdaFgPp8HSZKAEAL5Qh7Sq2lIJBJwv2scUqkUnKoZgNhcDKhKg5aH+1IkcouCAdFGAQsuWZYhOjwFHQ96oagWgRoUov1T9kRBEODAwxM2QtEUl+Wp+Ln9VRo6BcMw4ErHRYjH4/B26AlQoQQTRdHWwcd9AH57+UAXddvDD37DmrBBV34WfqiXPl61g+vr6xA9zsGeM9gOdsNXkgpEtTwVvwOklXLKm6+/p5ezwk4B+j6droBs2CsGa/gNs6RIxazl4Tc25mpTgw/apPR1LYlNRFAzgsOxkyXYLIM1V8NMwyAkJSctD1eGVKiq5wWjSPdjmeTkiKvVW4f2YPHWl3GAVq6ymcyCTgovM3FzyRiDe2TaKcEKsLpJvNHjZgPNqEtyi6mZIm4SRFyLMUsONSSdkPeFtY1n0mczoY3BHTLhwPRy9/lzcziCw9ACI+yql0VLzcGAZbYSM5CCSZg1/9oc/nn7+i8N9p/8An4JMADxhH+xHfuiKwAAAABJRU5ErkJggg==);
+}
+.notifyjs-bootstrap-info {
+	color: #3A87AD;
+	background-color: #D9EDF7;
+	border-color: #BCE8F1;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFAhkSsdes/QAAA8dJREFUOMvVlGtMW2UYx//POaWHXg6lLaW0ypAtw1UCgbniNOLcVOLmAjHZolOYlxmTGXVZdAnRfXQm+7SoU4mXaOaiZsEpC9FkiQs6Z6bdCnNYruM6KNBw6YWewzl9z+sHImEWv+vz7XmT95f/+3/+7wP814v+efDOV3/SoX3lHAA+6ODeUFfMfjOWMADgdk+eEKz0pF7aQdMAcOKLLjrcVMVX3xdWN29/GhYP7SvnP0cWfS8caSkfHZsPE9Fgnt02JNutQ0QYHB2dDz9/pKX8QjjuO9xUxd/66HdxTeCHZ3rojQObGQBcuNjfplkD3b19Y/6MrimSaKgSMmpGU5WevmE/swa6Oy73tQHA0Rdr2Mmv/6A1n9w9suQ7097Z9lM4FlTgTDrzZTu4StXVfpiI48rVcUDM5cmEksrFnHxfpTtU/3BFQzCQF/2bYVoNbH7zmItbSoMj40JSzmMyX5qDvriA7QdrIIpA+3cdsMpu0nXI8cV0MtKXCPZev+gCEM1S2NHPvWfP/hL+7FSr3+0p5RBEyhEN5JCKYr8XnASMT0xBNyzQGQeI8fjsGD39RMPk7se2bd5ZtTyoFYXftF6y37gx7NeUtJJOTFlAHDZLDuILU3j3+H5oOrD3yWbIztugaAzgnBKJuBLpGfQrS8wO4FZgV+c1IxaLgWVU0tMLEETCos4xMzEIv9cJXQcyagIwigDGwJgOAtHAwAhisQUjy0ORGERiELgG4iakkzo4MYAxcM5hAMi1WWG1yYCJIcMUaBkVRLdGeSU2995TLWzcUAzONJ7J6FBVBYIggMzmFbvdBV44Corg8vjhzC+EJEl8U1kJtgYrhCzgc/vvTwXKSib1paRFVRVORDAJAsw5FuTaJEhWM2SHB3mOAlhkNxwuLzeJsGwqWzf5TFNdKgtY5qHp6ZFf67Y/sAVadCaVY5YACDDb3Oi4NIjLnWMw2QthCBIsVhsUTU9tvXsjeq9+X1d75/KEs4LNOfcdf/+HthMnvwxOD0wmHaXr7ZItn2wuH2SnBzbZAbPJwpPx+VQuzcm7dgRCB57a1uBzUDRL4bfnI0RE0eaXd9W89mpjqHZnUI5Hh2l2dkZZUhOqpi2qSmpOmZ64Tuu9qlz/SEXo6MEHa3wOip46F1n7633eekV8ds8Wxjn37Wl63VVa+ej5oeEZ/82ZBETJjpJ1Rbij2D3Z/1trXUvLsblCK0XfOx0SX2kMsn9dX+d+7Kf6h8o4AIykuffjT8L20LU+w4AZd5VvEPY+XpWqLV327HR7DzXuDnD8r+ovkBehJ8i+y8YAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-warn {
+	color: #C09853;
+	background-color: #FCF8E3;
+	border-color: #FBEED5;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABJlBMVEXr6eb/2oD/wi7/xjr/0mP/ykf/tQD/vBj/3o7/uQ//vyL/twebhgD/4pzX1K3z8e349vK6tHCilCWbiQymn0jGworr6dXQza3HxcKkn1vWvV/5uRfk4dXZ1bD18+/52YebiAmyr5S9mhCzrWq5t6ufjRH54aLs0oS+qD751XqPhAybhwXsujG3sm+Zk0PTwG6Shg+PhhObhwOPgQL4zV2nlyrf27uLfgCPhRHu7OmLgAafkyiWkD3l49ibiAfTs0C+lgCniwD4sgDJxqOilzDWowWFfAH08uebig6qpFHBvH/aw26FfQTQzsvy8OyEfz20r3jAvaKbhgG9q0nc2LbZxXanoUu/u5WSggCtp1anpJKdmFz/zlX/1nGJiYmuq5Dx7+sAAADoPUZSAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfdBgUBGhh4aah5AAAAlklEQVQY02NgoBIIE8EUcwn1FkIXM1Tj5dDUQhPU502Mi7XXQxGz5uVIjGOJUUUW81HnYEyMi2HVcUOICQZzMMYmxrEyMylJwgUt5BljWRLjmJm4pI1hYp5SQLGYxDgmLnZOVxuooClIDKgXKMbN5ggV1ACLJcaBxNgcoiGCBiZwdWxOETBDrTyEFey0jYJ4eHjMGWgEAIpRFRCUt08qAAAAAElFTkSuQmCC);
+}
+</style><style type="text/css" id="core-notify">.notifyjs-corner {
+	position: fixed;
+	margin: 5px;
+	z-index: 1050;
+}
+
+.notifyjs-corner .notifyjs-wrapper,
+.notifyjs-corner .notifyjs-container {
+	position: relative;
+	display: block;
+	height: inherit;
+	width: inherit;
+	margin: 3px;
+}
+
+.notifyjs-wrapper {
+	z-index: 1;
+	position: absolute;
+	display: inline-block;
+	height: 0;
+	width: 0;
+}
+
+.notifyjs-container {
+	display: none;
+	z-index: 1;
+	position: absolute;
+}
+
+.notifyjs-hidable {
+	cursor: pointer;
+}
+
+[data-notify-text],[data-notify-html] {
+	position: relative;
+}
+
+.notifyjs-arrow {
+	position: absolute;
+	z-index: 2;
+	width: 0;
+	height: 0;
+}</style><script type="text/javascript" async="" data-rocketsrc="https://in.getclicky.com/in.php?site_id=101031819&amp;res=1920x1080&amp;lang=en&amp;secure=1&amp;type=pageview&amp;href=%2Fgame%2FHopper%2F&amp;title=Game%20%E2%80%94%C2%A0%20PACTF&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;jsuid=2239405290&amp;mime=js&amp;x=0.5388397477227842" data-rocketoptimized="true"></script><script type="text/javascript" src="https://in.getclicky.com/in.php?site_id=101031819&amp;res=1920x1080&amp;lang=en&amp;secure=1&amp;type=pageview&amp;href=%2Fgame%2FHopper%2F&amp;title=Game%20%E2%80%94%C2%A0%20PACTF&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;jsuid=2239405290&amp;mime=js&amp;x=0.5388397477227842"></script><script type="text/javascript" async="" data-rocketsrc="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.10704922108838466" data-rocketoptimized="true"></script><script type="text/javascript" src="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.10704922108838466"></script><script type="text/javascript" async="" data-rocketsrc="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.7669893252855917" data-rocketoptimized="true"></script><script type="text/javascript" src="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.7669893252855917"></script><script type="text/javascript" async="" data-rocketsrc="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.14700048987880932" data-rocketoptimized="true"></script><script type="text/javascript" src="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.14700048987880932"></script><script type="text/javascript" async="" data-rocketsrc="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.9362724353729244" data-rocketoptimized="true"></script><script type="text/javascript" src="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.9362724353729244"></script><script type="text/javascript" async="" data-rocketsrc="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.25350015282459193" data-rocketoptimized="true"></script><script type="text/javascript" src="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.25350015282459193"></script><script type="text/javascript" async="" data-rocketsrc="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.08256479666974914" data-rocketoptimized="true"></script><script type="text/javascript" src="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.08256479666974914"></script><script type="text/javascript" async="" data-rocketsrc="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.6149855020313872" data-rocketoptimized="true"></script><script type="text/javascript" src="https://in.getclicky.com/in.php?site_id=101031819&amp;type=ping&amp;jsuid=2239405290&amp;mime=js&amp;x=0.6149855020313872"></script><script type="text/javascript" async="" data-rocketsrc="https://in.getclicky.com/in.php?site_id=101031819&amp;res=1920x1080&amp;lang=en&amp;secure=1&amp;type=outbound&amp;href=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSchizophasia&amp;title=schizophasia&amp;jsuid=2239405290&amp;mime=js&amp;x=0.9380221181402171" data-rocketoptimized="true"></script><script type="text/javascript" src="https://in.getclicky.com/in.php?site_id=101031819&amp;res=1920x1080&amp;lang=en&amp;secure=1&amp;type=outbound&amp;href=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSchizophasia&amp;title=schizophasia&amp;jsuid=2239405290&amp;mime=js&amp;x=0.9380221181402171"></script></head>
+<body>
+
+<nav class="navbar navbar-fixed-top navbar-inverse">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand logo logo-inline" href="https://2018.pactf.com/">
+
+<svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 250 165">
+<defs>
+<clippath id="t-mask">
+<polygon points="
+            -100 0
+            -100 95
+            200 95
+            200 0
+            "></polygon>
+</clippath>
+<clippath id="f-mask">
+<polygon points="
+            5 5
+            5 100
+            50 100
+            50 5
+            "></polygon>
+</clippath>
+</defs>
+<g id="container">
+<g id="p">
+<g id="pole" transform="
+            translate(5 65)
+            ">
+<polyline class="outline" points="
+                0 95
+                5 95
+                5 -60
+                0 -60
+                0 95
+                "></polyline>
+</g>
+<g id="flag" transform="
+            translate(15, 5)
+            ">
+<polygon class="fill" points="
+                0 0
+                230 50
+                0 50
+                "></polygon>
+<polyline class="outline" points="
+                -5 0
+                230 50
+                -5 50
+                "></polyline>
+</g>
+<polyline class="inline" points="
+            10 155
+            10 14
+            177 46
+            10 46
+            "></polyline>
+</g>
+<g id="actf">
+<g id="a" transform="
+            translate(29, 65)
+            ">
+<polygon class="fill" points="
+                0, 100
+                25, 0
+                50, 100
+                "></polygon>
+<polyline class="outline" points="
+                1, 95
+                25, 5
+                49, 95
+                "></polyline>
+<polyline class="inline" points="
+                10, 92
+                25, 30
+                40, 92
+                "></polyline>
+</g>
+<g id="c" transform="
+            translate(81, 65)
+            ">
+<polygon class="fill" points="
+                44, 95
+                0, 50
+                44, 5
+                "></polygon>
+<polyline class="outline" points="
+                39, 95
+                1, 50
+                39, 5
+                "></polyline>
+<polyline class="inline" points="
+                37, 85
+                10, 50
+                37, 15
+                "></polyline>
+</g>
+<g id="t" transform="
+            translate(135, 65)
+            ">
+<polygon class="fill" clip-path="url(#t-mask)" points="
+                -5 5
+                55 5
+                25 113
+                "></polygon>
+<polyline class="outline" points="
+                0 5
+                50 5
+                25 5
+                25 95
+                "></polyline>
+<polyline class="inline" points="
+                5 10
+                45 10
+                25 10
+                25 80
+                "></polyline>
+</g>
+<g id="f" transform="
+            translate(200 65)
+            ">
+<polygon class="fill" clip-path="url(#f-mask)" points="
+                53 0
+                -5 0
+                -5 116
+                "></polygon>
+<polyline class="outline" points="
+                45 5
+                0 5
+                0 95
+                "></polyline>
+<polyline class="inline" points="
+                40 10
+                5 10
+                5 80
+                "></polyline>
+</g>
+</g>
+</g>
+</svg>
+<span class="sr-only">PACTF</span>
+</a>
+</div>
+<div class="collapse navbar-collapse" id="navbar-collapse">
+<ul class="nav navbar-nav">
+<li><a href="https://2018.pactf.com/game/">Game</a></li>
+<li><a href="https://2018.pactf.com/scoreboard/">Scoreboard</a></li>
+<li>
+<a href="https://2018.pactf.com/news/">
+News
+<span class="badge alert-danger" id="unread-announcements-badge" style="display: none;">0</span>
+</a>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li class="dropdown">
+<a href="https://2018.pactf.com/game/Hopper/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PACTF 2018<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="https://2016.pactf.com/" target="_blank">PACTF 2016</a></li>
+<li><a href="https://2017.pactf.com/" target="_blank">PACTF 2017</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="https://2018.pactf.com/game/Hopper/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="https://2018.pactf.com/about/">The Team</a></li>
+<li><a href="https://2018.pactf.com/sponsors/">Our Sponsors</a></li>
+<li><a href="https://2018.pactf.com/prizes/">Prizes</a></li>
+<li><a href="https://2018.pactf.com/winners/">Winners</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="https://2018.pactf.com/game/Hopper/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="https://2018.pactf.com/learn/">Learn</a></li>
+<li><a href="https://2018.pactf.com/chat/">Chat</a></li>
+</ul>
+</li>
+<li><p class="navbar-text">Score: <span id="navbar-score">175</span></p></li>
+<li class="dropdown">
+<a href="https://2018.pactf.com/game/Hopper/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="https://2018.pactf.com/account/">Personal Account</a></li>
+<li><a href="https://2018.pactf.com/team/508">Team Page</a></li>
+<li><a href="https://2018.pactf.com/logout/">Logout</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<header class="page-title">
+<div class="container">
+<h1>
+Game: Round 2
+(Ongoing)
+</h1>
+<div id="window-dropdown-container">
+<div id="window-dropdown" class="dropdown ">
+<button class="btn btn-default dropdown-toggle" type="button" id="window-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Switch Round
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="window-dropdown-menu">
+<li class="">
+<a href="https://2018.pactf.com/game/Lovelace/">
+Round 1
+</a></li>
+<li class="disabled">
+<a href="https://2018.pactf.com/game/Hopper/">
+Round 2
+(Ongoing)
+</a></li>
+<li class="">
+<a href="https://2018.pactf.com/game/Tiebreaker/">
+Tiebreaker
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<div id="content">
+<p>
+<strong>Your team’s two-day timer is active!</strong> You can solve problems below until your timer runs out.
+</p>
+<div id="timer">
+<div class="timespan days">
+<span class="value">0</span>
+<div class="description">Days</div>
+</div>
+<div class="timespan hours">
+<span class="value">15</span>
+<div class="description">Hours</div>
+</div>
+<div class="timespan minutes">
+<span class="value">47</span>
+<div class="description">Minutes</div>
+</div>
+<div class="timespan seconds">
+<span class="value">41</span>
+<div class="description">Seconds</div>
+</div>
+</div>
+<p><em>Something seem amiss? Shoot us an email at <a href="mailto:contact@pactf.com">contact@pactf.com</a>.</em></p>
+<div id="problems">
+<div class="problem  well well-sm" id="5170f735-412a-4b74-8a49-23ba03fb6120">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Doppelgänger</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#5170f735-412a-4b74-8a49-23ba03fb6120">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">10</span>
+</span>
+</h3>
+</div>
+<div id="5170f735-412a-4b74-8a49-23ba03fb6120-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>My friend Miles texted me today with this phrase “МОРЕ РОЕТ АТОМ”. I first thought that he went insane and has <a href="https://en.wikipedia.org/wiki/Schizophasia">schizophasia</a>. Apparently, it makes sense! Even though it doesn’t. So, what do you think is digging?</p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content" style="display: block;">
+<p>Consider the case and UTF-8 values of the characters…</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-5170f735-412a-4b74-8a49-23ba03fb6120">Flag: </label>
+<div class="input-group">
+<input id="flag-5170f735-412a-4b74-8a49-23ba03fb6120" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-5170f735-412a-4b74-8a49-23ba03fb6120" type="submit" value="Check!" onclick="submit_flag(&#39;5170f735\u002D412a\u002D4b74\u002D8a49\u002D23ba03fb6120&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem problem-solved well well-sm" id="52af75d8-b1d4-450b-8262-d2f91de09d09">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Redacted</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#52af75d8-b1d4-450b-8262-d2f91de09d09">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Solved</span>
+—
+<span class="problem-points">10</span>
+</span>
+</h3>
+</div>
+<div id="52af75d8-b1d4-450b-8262-d2f91de09d09-body" class="problem-body" style="display: block;">
+
+
+<div class="problem-description">
+<p>ANDOVER, MA— Phillips Academy Capture the Flag releases an institution-wide memorandum on the security of PDF documents. For privacy, parts of the memo are redacted.</p>
+<p>View the memo: <a href="https://2018.pactf.com/static/ctfproblems/52af75d8-b1d4-450b-8262-d2f91de09d09/SECURE_REDACTED_COPY.42ce971cad34.pdf">SECURE REDACTED MEMORANDUM</a>.</p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>Redaction, huh?</p>
+</div>
+
+<br>
+<p>Your team has already solved this problem!</p>
+</div>
+</div>
+<div class="problem problem-solved well well-sm" id="5231a7a7-7bde-4065-8613-b47ac5e1971a">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Am I Pwned?</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#5231a7a7-7bde-4065-8613-b47ac5e1971a">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Solved</span>
+—
+<span class="problem-points">15</span>
+</span>
+</h3>
+</div>
+<div id="5231a7a7-7bde-4065-8613-b47ac5e1971a-body" class="problem-body" style="display: block;">
+
+
+<div class="problem-description">
+<p>I was talking on IRC with a guy who tricked me into giving him a hash of my password and then said he could hack me!
+He said I might be “pwned”! I know the hashing algorithm is MD5; that’s still secure, right?</p>
+<p>… Oh, you want to know whether my password is secure or not?</p>
+<p>It doesn’t have any uppercase letters or numbers or punctuation, but isn’t six characters still a lot?
+what he meant by that one. Would you be able to hack my password? Here’s the hash:</p>
+<p><code>eca065fba51916821eb7274c786c67d9</code></p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>The hacker told me that “MD5 is kinda rekt”. That sounds bad, right? I mean, how long would it take to brute force it…</p>
+</div>
+
+<br>
+<p>Your team has already solved this problem!</p>
+</div>
+</div>
+<div class="problem problem-solved well well-sm" id="a187400b-032a-4ac8-9e79-ceb03d089b17">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">It's In, If</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#a187400b-032a-4ac8-9e79-ceb03d089b17">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Solved</span>
+—
+<span class="problem-points">20</span>
+</span>
+</h3>
+</div>
+<div id="a187400b-032a-4ac8-9e79-ceb03d089b17-body" class="problem-body" style="display: block;">
+
+
+<div class="problem-description">
+<p>My older brother sent me <a href="https://2018.pactf.com/static/ctfproblems/a187400b-032a-4ac8-9e79-ceb03d089b17/itsinif.8f2056d643d8.jpg">this</a> photo, but I don’t know what to make of it.</p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>What might big brother know?</p>
+</div>
+
+<br>
+<p>Your team has already solved this problem!</p>
+</div>
+</div>
+<div class="problem  well well-sm" id="47708183-239f-4565-834b-b5550c5634a4">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Letter to a Machine</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#47708183-239f-4565-834b-b5550c5634a4">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">25</span>
+</span>
+</h3>
+</div>
+<div id="47708183-239f-4565-834b-b5550c5634a4-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>You intercepted a <a href="https://2018.pactf.com/static/ctfproblems/47708183-239f-4565-834b-b5550c5634a4/letter.c5e1ae35c726.rar">letter.rar</a>—but to read it, you have to prove that you are <em>not a human</em>. The password is <code>NOT BAD</code> + <code>FACE</code>.</p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content" style="display: block;">
+<p>I’m sure it’s just coincidence that <code>BAD</code> and <code>FACE</code> can be spelled with just the letters <code>ABCDEF</code>…</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-47708183-239f-4565-834b-b5550c5634a4">Flag: </label>
+<div class="input-group">
+<input id="flag-47708183-239f-4565-834b-b5550c5634a4" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-47708183-239f-4565-834b-b5550c5634a4" type="submit" value="Check!" onclick="submit_flag(&#39;47708183\u002D239f\u002D4565\u002D834b\u002Db5550c5634a4&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem  well well-sm" id="9829bbb5-dd77-48b7-b508-b2b7f598d882">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">The Signal and the Noise</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#9829bbb5-dd77-48b7-b508-b2b7f598d882">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">35</span>
+</span>
+</h3>
+</div>
+<div id="9829bbb5-dd77-48b7-b508-b2b7f598d882-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>There’s a message in here somewhere! You’ll have to find it yourself.</p>
+<p><a href="https://2018.pactf.com/static/ctfproblems/9829bbb5-dd77-48b7-b508-b2b7f598d882/haystack.ef77fe451087.txt">Find the needle in the haystack!</a></p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>There must be something that distinguishes the signal from the noise. How could you mark something in a
+plain text file? All you have are Unicode characters…</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-9829bbb5-dd77-48b7-b508-b2b7f598d882">Flag: </label>
+<div class="input-group">
+<input id="flag-9829bbb5-dd77-48b7-b508-b2b7f598d882" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-9829bbb5-dd77-48b7-b508-b2b7f598d882" type="submit" value="Check!" onclick="submit_flag(&#39;9829bbb5\u002Ddd77\u002D48b7\u002Db508\u002Db2b7f598d882&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem  well well-sm" id="4c4f735f-2c0e-40f5-a664-100d07452fed">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Partial Encryption</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#4c4f735f-2c0e-40f5-a664-100d07452fed">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">40</span>
+</span>
+</h3>
+</div>
+<div id="4c4f735f-2c0e-40f5-a664-100d07452fed-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>You are a military commander. Some poor intern has tried encrypting their messages to you. They gave you this string: <code>4iyNz2zmshroxdaoqqr</code>. Well now you’re going to have to spend all afternoon on this…</p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content" style="display: block;">
+<p>They also scribbled the string <code>its?vIg</code> at the bottom, and the <code>?</code> just means I’m not sure what they wrote. Remember to include the underscore!</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-4c4f735f-2c0e-40f5-a664-100d07452fed">Flag: </label>
+<div class="input-group">
+<input id="flag-4c4f735f-2c0e-40f5-a664-100d07452fed" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-4c4f735f-2c0e-40f5-a664-100d07452fed" type="submit" value="Check!" onclick="submit_flag(&#39;4c4f735f\u002D2c0e\u002D40f5\u002Da664\u002D100d07452fed&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem  well well-sm" id="070567d4-735c-41dd-8610-b5f71053b151">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Truly Blue?</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#070567d4-735c-41dd-8610-b5f71053b151">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">45</span>
+</span>
+</h3>
+</div>
+<div id="070567d4-735c-41dd-8610-b5f71053b151-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>I love lots of things about my school, <a href="https://www.andover.edu/">Phillips Academy Andover</a>. But most of
+all, I love its school color: a soothing shade of blue. I couldn’t just tell you the hex code for
+the color; that wouldn’t be enough! I think a 128 x 128 PNG file is probably a better method of
+conveying its utter beauty. That’s not suspicious, right? Gaze upon its beauty!
+<a href="https://2018.pactf.com/static/ctfproblems/070567d4-735c-41dd-8610-b5f71053b151/true-blue.08c0cb787f26.png">True blue!</a></p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>Did you know there are 16,777,216 possible RGB colors, and only one of them is Andover blue? I
+wonder if you could even tell the difference between all of them…</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-070567d4-735c-41dd-8610-b5f71053b151">Flag: </label>
+<div class="input-group">
+<input id="flag-070567d4-735c-41dd-8610-b5f71053b151" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-070567d4-735c-41dd-8610-b5f71053b151" type="submit" value="Check!" onclick="submit_flag(&#39;070567d4\u002D735c\u002D41dd\u002D8610\u002Db5f71053b151&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem  well well-sm" id="0b2904e9-3e69-46d7-a7a0-24406032eba3">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Zip Zap Zop</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#0b2904e9-3e69-46d7-a7a0-24406032eba3">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">45</span>
+</span>
+</h3>
+</div>
+<div id="0b2904e9-3e69-46d7-a7a0-24406032eba3-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>My friend gave me <a href="data:application/zip;base64,eJwB6AAX/3icAd0AIv94nKuYw3iSwex/xRzGfQyOIGozgw+IWsEQDqLmMiSBqEkMuUBq9YzDEccv/NifxJds6MzfcSphBt+iJEkxxpVXjfn2W+x8mPs3UNL89ba09jVrK+Pe+Xn6+R43/vv0v9/M4wrbKr7/2ftwzrbXLu9P3vlp/fjX+W7+u+/lbEuubN2/aNe2TVu+/WnP1+c6t+9nadbhUyu/nsyvMHoul/qnZKrjs0VdWy6HJyf7h38+fpbH7LPdM4tPjAzTWFzPipQHNpueDP3asy86QHp7QsS9hylfby3JVgAAD3twPAb+e+S7HIFa">this file</a>, but I have no idea what to do with it?</p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>I tried to make this file really, really small.</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-0b2904e9-3e69-46d7-a7a0-24406032eba3">Flag: </label>
+<div class="input-group">
+<input id="flag-0b2904e9-3e69-46d7-a7a0-24406032eba3" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-0b2904e9-3e69-46d7-a7a0-24406032eba3" type="submit" value="Check!" onclick="submit_flag(&#39;0b2904e9\u002D3e69\u002D46d7\u002Da7a0\u002D24406032eba3&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem  well well-sm" id="976450bb-54b5-4d08-95dd-0b1542d99486">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Reversal 3 2 1</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#976450bb-54b5-4d08-95dd-0b1542d99486">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">50</span>
+</span>
+</h3>
+</div>
+<div id="976450bb-54b5-4d08-95dd-0b1542d99486-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>I received <a href="https://2018.pactf.com/static/ctfproblems/976450bb-54b5-4d08-95dd-0b1542d99486/source.6d9692804a8b.out">this file</a> from my bananagrams partners! I think they’re just trying to distract me from the game. I need to finish this one quick, so I can get back to my game! Any help?</p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>Who doesn’t like a good game of bananagrams?</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-976450bb-54b5-4d08-95dd-0b1542d99486">Flag: </label>
+<div class="input-group">
+<input id="flag-976450bb-54b5-4d08-95dd-0b1542d99486" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-976450bb-54b5-4d08-95dd-0b1542d99486" type="submit" value="Check!" onclick="submit_flag(&#39;976450bb\u002D54b5\u002D4d08\u002D95dd\u002D0b1542d99486&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem  well well-sm" id="26d60dfb-8213-487b-8409-de512566102a">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Streaming Attack</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#26d60dfb-8213-487b-8409-de512566102a">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">50</span>
+</span>
+</h3>
+</div>
+<div id="26d60dfb-8213-487b-8409-de512566102a-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>A popular <code>twitch.tv</code> streamer who goes by <code>BabblingBrook_PACTF</code> streams her adventures trying to
+visit a waterfall in every country that has one. She doesn’t like attention, so she encrypts her
+messages to us so that people don’t know where she’s heading next. I managed to get a copy of the
+encryption program, and I also managed to get an encrypted version of the message <code>TheCodeSamurai subscribed for 3 months! Thank you, TheCodeSamurai!</code> sent to me by subscribing. Here’s the message (in hexadecimal):</p>
+<pre><code>C1D7B5D06DD88D0F894E592B0A5FDB93C4F151C04BC2540D8626E5B0017D604E33ABC51334662B8ED8CCADE9B039AE4FB5F363EA9EDD32D551C32A892B058CDE8B0B
+</code></pre>
+<p>Now, I want to decrypt the following message. Any way of helping me out?</p>
+<pre><code>F4E0A7F276D99A3A894F40060245A48AC4E056FC58F4451C9063E2B22C323D3137B0D8382F7C6ECB
+</code></pre>
+<p><a href="https://2018.pactf.com/static/ctfproblems/26d60dfb-8213-487b-8409-de512566102a/encryptor.ef241ed09dfc">Here’s the encryption program; you’ll need it.</a></p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>BabblingBrook_PACTF is a nice person, but I don’t think she’s super good at cryptography. Any way
+you could exploit that fact?</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-26d60dfb-8213-487b-8409-de512566102a">Flag: </label>
+<div class="input-group">
+<input id="flag-26d60dfb-8213-487b-8409-de512566102a" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-26d60dfb-8213-487b-8409-de512566102a" type="submit" value="Check!" onclick="submit_flag(&#39;26d60dfb\u002D8213\u002D487b\u002D8409\u002Dde512566102a&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem problem-solved well well-sm" id="d18474ee-1fbe-44d5-b55e-7fb3d9de99fb">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Victor</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#d18474ee-1fbe-44d5-b55e-7fb3d9de99fb">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Solved</span>
+—
+<span class="problem-points">50</span>
+</span>
+</h3>
+</div>
+<div id="d18474ee-1fbe-44d5-b55e-7fb3d9de99fb-body" class="problem-body" style="display: block;">
+
+
+<div class="problem-description">
+<p>Привет, меня зовут Рейно, иначе известный как Виктор. Пожалуйста, расшифруйте это секретное сообщение - у меня нет времени для этого. Я предоставляю вам ключ.</p>
+<p><em>Note: the flag contains Cyrillic characters.</em></p>
+<p><a href="https://2018.pactf.com/static/ctfproblems/d18474ee-1fbe-44d5-b55e-7fb3d9de99fb/key.490c9f36a766.png">необходимая информация</a></p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>Google Translate is your friend—but you might want to familiarize yourself with Russian Nihilism, too.</p>
+</div>
+
+<br>
+<p>Your team has already solved this problem!</p>
+</div>
+</div>
+<div class="problem  well well-sm" id="800b0ae9-fbc7-47bb-87d0-03e91e9bbc40">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Wakanda problem is this?</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#800b0ae9-fbc7-47bb-87d0-03e91e9bbc40">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">60</span>
+</span>
+</h3>
+</div>
+<div id="800b0ae9-fbc7-47bb-87d0-03e91e9bbc40-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>You’ve arrived at Wakanda’s border. Only the flag will allow you to enter.
+<a href="https://2018.pactf.com/static/ctfproblems/800b0ae9-fbc7-47bb-87d0-03e91e9bbc40/gate.5ae2b2e0aa79.jpg">This is all you have.</a></p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content" style="display: block;">
+<p>Use the bytes in the second image.</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-800b0ae9-fbc7-47bb-87d0-03e91e9bbc40">Flag: </label>
+<div class="input-group">
+<input id="flag-800b0ae9-fbc7-47bb-87d0-03e91e9bbc40" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-800b0ae9-fbc7-47bb-87d0-03e91e9bbc40" type="submit" value="Check!" onclick="submit_flag(&#39;800b0ae9\u002Dfbc7\u002D47bb\u002D87d0\u002D03e91e9bbc40&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem  well well-sm" id="f5f28b96-a37e-4094-a529-ae43ba8ecfc8">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Library of Babel</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#f5f28b96-a37e-4094-a529-ae43ba8ecfc8">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">75</span>
+</span>
+</h3>
+</div>
+<div id="f5f28b96-a37e-4094-a529-ae43ba8ecfc8-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>Is <a href="https://2018.pactf.com/static/ctfproblems/f5f28b96-a37e-4094-a529-ae43ba8ecfc8/video.f3db89aeb9f4.mp4">this</a> what passes through fiber optic cables? Must be…</p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content" style="display: block;">
+<p>It is much faster to extract frames from the video and write a script!</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-f5f28b96-a37e-4094-a529-ae43ba8ecfc8">Flag: </label>
+<div class="input-group">
+<input id="flag-f5f28b96-a37e-4094-a529-ae43ba8ecfc8" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-f5f28b96-a37e-4094-a529-ae43ba8ecfc8" type="submit" value="Check!" onclick="submit_flag(&#39;f5f28b96\u002Da37e\u002D4094\u002Da529\u002Dae43ba8ecfc8&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem problem-solved well well-sm" id="f82018ea-eaea-49df-aa72-d16bb90904a3">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">AI</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#f82018ea-eaea-49df-aa72-d16bb90904a3">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Solved</span>
+—
+<span class="problem-points">80</span>
+</span>
+</h3>
+</div>
+<div id="f82018ea-eaea-49df-aa72-d16bb90904a3-body" class="problem-body" style="display: block;">
+
+
+<div class="problem-description">
+<p>Our artificial intelligence engineer made a groundbreaking discovery, but left the company unexpectedly… all we have is the obfuscated <a href="https://2018.pactf.com/static/ctfproblems/f82018ea-eaea-49df-aa72-d16bb90904a3/source.dc0369d6de19.txt">source.txt</a>…</p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>What language thinks 3 + ‘3’ == “33”?</p>
+</div>
+
+<br>
+<p>Your team has already solved this problem!</p>
+</div>
+</div>
+<div class="problem  well well-sm" id="f39f3522-f841-4286-81a1-23baeb9e5572">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Hash Master</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#f39f3522-f841-4286-81a1-23baeb9e5572">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">90</span>
+</span>
+</h3>
+</div>
+<div id="f39f3522-f841-4286-81a1-23baeb9e5572-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>Miles forgot his login for <a href="https://openwi.re/">OPENWI:RE</a>, so he asked Darcy to send a password reset. Instead, she gave him the hash of his password—and the custom hashing algorithm. Miles doesn’t have great password security, so you could probably brute force it… but maybe there’s a way to do this more efficiently?</p>
+<p>Here is the hash of Miles’ password: <code>293366475</code></p>
+<p>Here is the hashing algorithm:</p>
+<pre><code>def hash_it(string):
+    q = 0
+    z = 127
+    for i in [int(byte) for byte in bytearray(string, "utf-8")]:
+        q += i
+        z *= i
+    return (((q &lt;&lt; 3)+1)*z) % (2**32 - 1)
+</code></pre>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>Okay, <a href="https://openwi.re/">OPENWI:RE</a> isn’t part of this problem. But you should still subscribe! If you’re interested in what else the PACTF team has been working on individually, check out <a href="https://rmrm.io/">Miles’ personal site</a> and Igor’s <a href="https://icybounce.com/">IcyBounce</a>. Alex has been doing some <a href="https://reichenbach.org/">cool things too</a>.</p>
+<p>Oh, by the way, Miles’ shift keys don’t work—and he’s not a big fan of numbers.</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-f39f3522-f841-4286-81a1-23baeb9e5572">Flag: </label>
+<div class="input-group">
+<input id="flag-f39f3522-f841-4286-81a1-23baeb9e5572" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-f39f3522-f841-4286-81a1-23baeb9e5572" type="submit" value="Check!" onclick="submit_flag(&#39;f39f3522\u002Df841\u002D4286\u002D81a1\u002D23baeb9e5572&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="problem  well well-sm" id="8e1a854f-653e-4aeb-b42a-bed896b35c1d">
+
+<div class="problem-header">
+<h3 class="container-fluid">
+<span class="pull-left">
+<span class="problem-title">Skywriting</span>
+<span class="header-link">
+<a href="https://2018.pactf.com/game/Hopper/#8e1a854f-653e-4aeb-b42a-bed896b35c1d">
+<span class="glyphicon glyphicon-link"></span>
+<span class="sr-only">Problem Permalink</span>
+</a>
+</span>
+</span>
+<span class="pull-right clearfix">
+<span class="problem-solved-status">Unsolved</span>
+—
+<span class="problem-points">100</span>
+</span>
+</h3>
+</div>
+<div id="8e1a854f-653e-4aeb-b42a-bed896b35c1d-body" class="problem-body">
+
+
+<div class="problem-description">
+<p>If you’ve been having a tough time with these problems, frustration can cloud your judgment. To fix that, try jamming out to some music to help you find the silver lining. Here, I’ll even give you some to try:</p>
+<p><a href="https://drive.google.com/open?id=1gYXEebqT4OSXVJR0kq79n8ZSw4T0dfVz">External Google Drive Link</a></p>
+</div>
+
+<input type="button" class="btn btn-primary hint-button" value="Toggle Hint">
+<div class="hint-content">
+<p>The bit of music you hear in that link up above is from a guy who goes by <a href="https://www.youtube.com/user/insaneintherainmusic">insaneintherainmusic</a> on the Internet. He does cool jazzy covers of video game music, and he kindly let us use his cover of <a href="https://www.youtube.com/watch?v=VEIWhy-urqM">Gusty Garden Galaxy</a> for this problem. Go check out more of his stuff if you like the little taste you get here!</p>
+</div>
+
+<form class="problem-form">
+<input type="hidden" name="csrfmiddlewaretoken" value="Q3f3Uck0SEhhTDtAWEm01FcmdrhbfRwJ">
+<label class="sr-only" for="flag-8e1a854f-653e-4aeb-b42a-bed896b35c1d">Flag: </label>
+<div class="input-group">
+<input id="flag-8e1a854f-653e-4aeb-b42a-bed896b35c1d" type="text" class="form-control" placeholder="Flag" name="flag" maxlength="200" required="">
+<span class="input-group-btn">
+<input class="btn btn-primary" id="submit-8e1a854f-653e-4aeb-b42a-bed896b35c1d" type="submit" value="Check!" onclick="submit_flag(&#39;8e1a854f\u002D653e\u002D4aeb\u002Db42a\u002Dbed896b35c1d&#39;); return false;">
+</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<p id="footer-text" class="text-muted">
+© PACTF 2018
+| <a target="_blank" href="https://2016.pactf.com/">PACTF 2016</a>
+| <a target="_blank" href="https://2017.pactf.com/">PACTF 2017</a>
+| <a target="_blank" href="https://pactf.statuspage.io/">System Status</a>
+| <a target="_blank" href="mailto:contact@pactf.com">Contact Us</a>
+| Made with
+<span class="glyphicon glyphicon-heart"></span> at
+<a target="_blank" href="https://www.andover.edu/">Phillips Academy</a>
+</p>
+<div id="footer-sponsors" class="row">
+<a href="https://2018.pactf.com/sponsors/">
+<img src="./game2_files/awseducate.small.transparent.6c6c2d6b6662.png">
+</a>
+<a href="https://2018.pactf.com/sponsors/">
+<img src="./game2_files/blue.smaller.4d8e5076b663.png">
+</a>
+<a href="https://2018.pactf.com/sponsors/">
+<img src="./game2_files/purple.small.acabb2049b50.png">
+</a>
+</div>
+</div>
+</footer>
+
+<script data-rocketsrc="//static.getclicky.com/js" type="text/rocketscript" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketoptimized="true">try{ clicky.init(101031819); }catch(e){}</script>
+<noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101031819ns.gif" /&gt;&lt;/p&gt;</noscript>
+<script type="text/rocketscript" data-rocketoptimized="true">
+    (function () {
+      window.js_context = {"countdown_endtime": "2018-04-29T23:24:57.911102+00:00"};
+      document.dispatchEvent(new Event('js_context'));
+    })();
+  </script>
+
+
+</body></html>

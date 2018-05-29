@@ -1,0 +1,193 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>PACTF</title>
+		<meta name="description" content="My Site">
+		<meta name="author" content="NullOverride">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+		body {
+			background-color: black;
+			display: block;
+			margin: 8px;
+			margin-top: 8px;
+			margin-right: 8px;
+			margin-bottom: 8px;
+			margin-left: 8px;
+		}
+		h1   {color: white;}
+		li   {color: white;}
+		p    {color: white;}
+		h1	 {color: white;}
+		h2	 {color: white;}
+		h3	 {color: white;}
+		h4	 {color: white;}
+		h5	 {color: white;}
+		a:link {
+			color: red;
+			text-decoration: underline;
+		}
+		a:visited {
+			color: hotpink;
+		}
+		a:hover {
+			color: pink;
+		}
+		a:active {
+			color: red;
+		}
+		img {
+			max-width:800px;
+		
+		}
+		</style>
+	</head>
+	
+	<body>
+		<h1>PACTF Writeup</h1>
+		
+		<h5><a href="./Game —  PACTF.html" target="_blank"> Round 1 Copy</a><br>
+		<a href="./game2.html" target="_blank"> Round 2 Copy</a><br>
+		<h2> Round 1 </h2>
+		<h3>A Picture is a Thousand Words (10)</h3>
+		<img src="./image.jpg"/>
+		<h5>Hint: You’re looking for text—how might you look at the text of the image?</h5>
+		<p><i>Easy. Open in a Text Editor.</i> <br>
+		Answer: <b>flag_is_DjKVIXXQRZZrrAd</b> </p>
+		
+		<h3>Straight From The Emperor (10)</h3>
+		<p><b>Cipher: </b>ny_nx_tsq3_zumnqq_kwtr_mjwj_68a6e9c57d<br>
+		Simple Caeser Cipher with numbers added to alphabet (Shift +5)<br>
+		Answer: <b>it_is_only_uphill_from_here_1351947028</b></p>
+		
+		<h3>Caesar Cipher? (20)</h3>
+		<p><b>Cipher: </b>5:6 1139:4 1620:3 172:4<br>
+		Classic Book Cipher, the text can be found <a href="https://www.opensourceshakespeare.org/views/plays/play_view.php?WorkID=juliuscaesar&Scope=entire&pleasewait=1&msg=pl" target="_blank">here</a>. Look up the words by [line:word] and you get "the answer is Cassius".<br>
+		Answer: <b>Cassius</b></p>
+		
+		<h3>Let me in (20)</h3>
+		<p>File: <a href="./account.rar" target="_blank">account.rar</a><br>
+		Hint: Something tells me the user might not be using complex passwords…<br>
+		Proceed to bruteforce with John the Ripper!<br>
+		<img src="./john.png" /><br>
+		Password = 123456<br>
+		Answer: <b>rgSueiMYehWJSZPZr</b></p>
+			
+		<h3>Go Git It (25)</h3>
+		<p>File: <a href="./go_git_it.tar.bz2" target="_blank">go_git_it</a><br>
+		Hint: Perhaps ‘chopping a branch off a tree’ would be the more precise analogy.<br>
+		This one was pretty difficult and required some research on Git branches and navigation.<br>
+		After adding the folder as a local repository, looking through the .git files shows a HEAD files with previous commits. So all I had to do was go back to the branch of "THE CODE SAMURAI" using a Git Shell. <br>
+		(git checkout 01ab3947246a08dcdd71056c33047bbb58d0ed)<br>
+		<img src="./head.png" /><br>
+		The flag is found in the README.md file.<br>
+		Answer: <b>
+		3x3rc1z3_caut10n_wh3n_d3tach1ng_ur_h3ad</b></p>
+		
+		<h3>Who Said It? (25)</h3>
+		<p><img src="./who.png" /><br>
+		Hint: Keys live on keyservers.<br>
+		A lot of research for a very simple problem.<br>
+		Basically find the public key on PGP key servers matching the RSA key using GPG on Kali.<br>
+		<img src="./gpg.png" /><br>
+		Answer: <b>the_real_answer_is_always_in_the_comments</b></p>
+		
+		<h3>Bad Melody (30)</h3>
+		<p>File: <a href="./melody.mid" target="_blank">melody.mid</a><br>
+		Hint: How would you edit MIDI?<br>
+		Super easy, not sure why worth this many points.<br>
+		I used FL Studio 12 and opened up the notes in piano roll.<br>
+		<img src="./midi.png" /><br>
+		Answer: <b>write your own music</b></p>
+		
+		<h3>Open Sourcery 2018 (30)</h3>
+		<p>Looking at previous CTFs, one of them has the query "i*pactf*e".<br>
+		Simply look up "pactf" on same <a href="https://cs.chromium.org/chromium/src/net/http/transport_security_state_static.json?q=i.*pactf.*e&maxsize=10919242&l=23793" target="_blank">page</a>.<br>
+		Answer: <b>pactf-flag-4boxdpa21ogonzkcrs9p.com</b></p>		
+		
+		<h3>Credit Card Leak (35)</h3>
+		<p>File: <a href="./cc.bz2" target="_blank">cc.bz2</a><br>
+		Look up how credit cards are validated using the Luhns algorithm.<br>
+		The last digit of a credit card is a check number based on all the other digits. So I found a python script that will check all the values of the list.<br>
+		<img src="./credit.png" /><br>
+		Answer: <b>8692015931457397</b></p>		
+		
+		<h3>Third eye (40)</h3>
+		<p>Looking at the source code gives you a bunch of empty-space characters.<br>
+		<img src="./empty.png" /><br>
+		Changing \&8203; to 0 and \&zwnj; to 1, you get a binary code.<br>
+		(
+01110111011010000110000101110100010111110110010101101100011100110110010101011111011011000111010101110010011010110111001101011111011000100110010101101110011001010110000101110100011010000101111101110100011010000110010101011111011001010111100101100101)<br>
+		This code is 248 bits long and can be converted into bytes. So changing binary to ASCII will get you the flag.
+		Answer: <b>what_else_lurks_beneath_the_eye</b></p>
+		
+		
+		<h3>Security Through Obscurity (50)</h3>
+		<p><b>Cipher: </b>Tązhii, Łį́į́ʼ, Dzeeh Mąʼii, Dibé yázhí, Wóláchííʼ, Tłʼízí Tin, Dibé Mósí, Łį́į́ʼ, Dzeeh, Dibé, Tązhii, Dzeeh, Gah, Neeshchʼííʼ, Dzeeh, Béésh dootłʼizh<br>
+		Look up a Navajo dictionary because there isn't a translator.<br>
+		After translating, you get:<br><br>
+				
+		turkey, horse, elk <br>
+		coyote(fox), lamb, ant, goat <br>
+		ice, sheep <br>
+		cat, horse, elk, sheep, turkey, elk, rabbit, nut, elk, zinc <br><br>
+		
+		Reading the first letter of each word gives you - the flag is chesternez.<br>
+		
+		Answer: <b>chesternez</b></p>
+
+		<h2>Round 2</h2>
+		
+		<h3>Redacted (10)</h3>
+		<p>File: <a href="./SECURE_REDACTED_COPY.pdf" target="_blank"> PDF </a> <br>We get a PDF with black bars over some text. Simply copy and paste the redacted parts will give you the flag. <br>
+		<br>
+		Answer: <b>b3_car3ful_0r_y0ur_l3ak_m1ght_l3ak</b>
+		</p>
+		
+		<h3>Am I Pwned? (15)</h3>
+		<p>MD5: eca065fba51916821eb7274c786c67d9 <br>
+		MD5 is not secure. Use <a href="https://crackstation.net/" target="_blank"> https://crackstation.net/</a> to do a lookup.
+		<br><br>
+		Answer: <b>lmaoez</b>
+		</p>
+		
+		<h3>It's In, If (20)</h3><br>
+		<img src="./itsinif.jpg"/><br>
+		<p><i>Easy again. Open in a Text Editor.</i> <br>
+		Answer: <b>big_brother_is_looking_at_your_photos</b> </p>
+		
+		<h3>Victor (50)</h3><br>
+		<img src="./key.png"/><br>
+		<p>We get a Russian key and this is a <a href="http://practicalcryptography.com/ciphers/straddle-checkerboard-cipher/">Straddle Checkerboard Cipher</a>. <br>
+		<a href="
+		http://russian.typeit.org/" target="_blank">Translating</a> the text tells you what is the cipher and what is the key. The answer is "do it by hand" in Russian.<br>
+		<br>
+		Answer: <b>
+		сделайте_эmо_вручную</b></p>
+		
+		<h3>AI (80)</h3><br><p> 
+		We get a
+		<a src="./jssource.txt" target="_blank">Source</a><br>
+		 file and this is obfuscated Javascript. <br>
+		 Running the code in a console will get you: <br>
+		<img src="./jsrun.png" /><br>
+		This gets you a <a href="ai.zip">zip</a> file with HTML/JS files in it. Looking through the script.js file, there is a launch_artificial_intelligence(stupid) function and a get_key_number(n, arr) function.<br>
+		Using the Chrome browser you can type the launch function with false as the parameter to get a cool animation. The get_key_number function is not implemented.<br>
+		Instead of implementing the function, you can calculate from the six values the maximum value of [16, 23, 16, 15, 42, 8]. The logic was meant to confuse and waste time.<br>
+		We plug in the number 120 into <a href="http://ibarakaiev.shpp.me/pactf_s7fj43/key_120.txt" target="_blank">http://ibarakaiev.shpp.me/pactf_s7fj43/key_%d.txt</a>.<br>
+		Lastly, we get a cipher - "mrxwozAp" encoded in custom ASCII. Change the decimal values into binary and we get 0110010001101111011001110110011101101111.<br>
+		<br>
+		Answer: <b> doggo</b> </p>
+		
+	</body>
+	
+</html>
