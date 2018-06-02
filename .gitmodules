@@ -1,0 +1,3 @@
+[submodule "CyberClub"]
+	path = CyberClub
+	url = git@github.com:NullOverride/CyberClub
