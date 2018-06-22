@@ -11,9 +11,40 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/animate.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+		<!--JQUERY Animation Extension-->
+		<script>
+		$.fn.extend({
+			animateCss: function(animationName, callback) {
+			var animationEnd = (function(el) {
+				var animations = {
+					animation: 'animationend',
+					OAnimation: 'oAnimationEnd',
+					MozAnimation: 'mozAnimationEnd',
+					WebkitAnimation: 'webkitAnimationEnd',
+				};
+
+				for (var t in animations) {
+					if (el.style[t] !== undefined) {
+						return animations[t];
+					}
+				}
+			})(document.createElement('div'));
+
+			this.addClass('animated ' + animationName).one(animationEnd, function() {
+				$(this).removeClass('animated ' + animationName);
+
+				if (typeof callback === 'function') callback();
+			});
+
+			return this;
+			},
+		});
+		</script>
+		
 		<style>
 		body {background-color: black;}
 		h1   {color: white;}
@@ -48,42 +79,21 @@
 		.panel-heading .panel-toggle.collapsed:after {
 			content: "\e080"; 
 		}
+		#nametitle {
+			animation-duration: 5s;
+		}
 		</style>
 	</head>
 	
 	<body>
 		<div class="container">
-		<h1>Hello! Better site incoming.</h1>
-		<br>
-		<p>For now..</p>
+		<h1 id="nametitle" class="text-center">Danny M.</h1>
 		<br>
 
-		<!-- Root accordian -->
-		<div class="panel-group" id="accordion1">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a class="panel-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse2">
-						CTF Write-ups
-						</a>
-					</h4>
-				</div>
-			<!-- Here we insert another nested accordion -->
-			<div id="collapse2" class="panel-body collapse">
-				<div class="panel-inner">
-					<div class="panel-body">
-						<a href="./ctfs/PACTF/pa.html">PACTF</a>
-					</div>
-				</div>
-			</div>
-			<!-- Inner accordion ends here -->
-		</div>
-	</div>
-	<!-- Root accordian ends here -->
 	
 	
 	<!-- Root accordian2 -->
-	<div class="panel-group" id="2accordion1">
+	<div class="panel-group animated bounceInLeft" id="2accordion1">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
@@ -144,10 +154,10 @@
 		</div>
 	</div>
 	<!-- Root accordian ends here -->
-	<br>
-	<h2>Previous CTF Rankings</h2>
 	
-	<table class="table table-hover table-dark">
+	<h2 class="animated bounceInRight">Previous CTF Rankings</h2>
+	
+	<table class="table table-hover table-dark animated bounceInUp">
 		<thead>
 			<tr>
 				<th scope="col">Name</th>
@@ -161,7 +171,8 @@
 				<td>PACTF 2018</td>
 				<td>Overall: <b>159th place </b>/ 1737</td>
 				<td>655</td>
-				<td><a href="./ctfs/PACTF/ScoreOverall.html">Link</a></td>
+				<td><a href="./ctfs/PACTF/ScoreOverall.html">Link</a><br>
+				<a href="./ctfs/PACTF/pa.html">Writeup</a></td>
 			</tr>
 			<tr>
 				<td>NCL Reg Season 2018 (Thanks Chad!)</td>
@@ -198,6 +209,15 @@
 	
 	</div>
 		
+		
+		
+		<script>
+		$("#nametitle").animateCss("bounceInLeft", function() {
+			$("#nametitle").animateCss("flip infinite", function () {
+			
+			});
+		});
+		</script>
 	</body>
 	
 </html>
